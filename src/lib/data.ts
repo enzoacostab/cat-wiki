@@ -5,8 +5,6 @@ export async function fetchBreed(breedId: string) {
     }
   })
   const cats = await data.json()
-  console.log(cats);
-  
   const breed = cats[0].breeds[0]
   const properties = ['adaptability', 'affection_level', 'child_friendly', 'grooming', 'intelligence', 'health_issues', 'social_needs', 'stranger_friendly']
   return { cats, breed, properties }

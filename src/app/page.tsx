@@ -24,7 +24,7 @@ export default function Home() {
             <h2 className="lg:text-5xl text-lg w-full leading-5 lg:leading-[58px]">66+ Breeds For you to discover</h2>
             <Link href={'/most-searched-breeds'} className="text-lg hover:underline underline-offset-4 text-[#29150799] hidden justify-end lg:flex w-[90%] items-center gap-1">SEE MORE<MdTrendingFlat size={24}/></Link>
           </div>
-          <div className="sm:flex gap-4 justify-between grid grid-cols-2 h-fit items-center relative">
+          <div className="sm:flex gap-4 sm:justify-between grid grid-cols-2 place-items-center h-fit items-center relative">
             <HomeImages/>
           </div>
         </div>
@@ -38,10 +38,10 @@ export default function Home() {
         </div>
         <div className="flex gap-5">
           <div className="flex flex-col *:h-fit w-[55%] items-end gap-5">
-            <Image src="/image 2.png" width={273} height={167} alt="image 2" className='h-auto w-auto'/>
-            <Image src="/image 1.png" width={195} height={290} alt="image 1" className='h-auto w-auto'/>
+            <Image src="/image 2.png" width={273} height={167} alt="image 2" className='h-auto w-auto drop-shadow-lg'/>
+            <Image src="/image 1.png" width={195} height={290} alt="image 1" className='h-auto w-auto drop-shadow-lg'/>
           </div>
-          <Image src="/image 3.png" width={238} height={385} alt="image 3" className="h-fit w-[45%]"/>
+          <Image src="/image 3.png" width={238} height={385} alt="image 3" className="h-fit w-[45%] drop-shadow-lg"/>
         </div>
       </section>
     </main>

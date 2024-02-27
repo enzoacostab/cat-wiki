@@ -11,7 +11,7 @@ export default async function BreedPage({ params }: { params: { breedId: string 
       <div className='flex flex-col lg:flex-row items-center lg:items-start pb-20 gap-5'>
         <div className='lg:w-[38%] w-fit h-fit relative flex items-center'>
           <div className="h-[80%] absolute w-5 bg-[#DEC68B] rounded-2xl -left-2"></div>
-          <Image priority src={cats[0].url} height={370} width={370} alt='cat image' className='z-10 rounded-3xl w-auto h-auto'/>
+          <Image priority src={cats[0].url} height={370} width={370} alt='cat image' className='z-10 rounded-3xl w-[370px] object-cover bg-gray-100 h-[370px] drop-shadow-lg'/>
         </div>
         <div className='flex flex-col items-center text-xs sm:text-base font-medium gap-6 lg:w-[62%] w-full'>
           <h1 className='text-3xl sm:text-4xl text-[#291507] font-semibold'>{breed.name}</h1>
@@ -44,7 +44,7 @@ export default async function BreedPage({ params }: { params: { breedId: string 
         <div className='flex flex-wrap gap-10 justify-center'>
           {cats.slice(1).map((cat: any) => 
             <div key={cat.id} className='h-[278px] relative w-[278px] bg-gray-100 rounded-3xl'>
-              <Image src={cat.url} alt='cat image' className='rounded-3xl' style={{ objectFit: 'cover' }} sizes='278px' fill/>
+              <Image src={cat.url} alt='cat image' className='rounded-3xl drop-shadow-lg' style={{ objectFit: 'cover' }} sizes='278px' fill/>
             </div>
           )}
         </div>
