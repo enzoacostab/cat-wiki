@@ -11,15 +11,15 @@ export default async function BreedPage({ params }: { params: { breedId: string 
       <div className='flex flex-col lg:flex-row items-center lg:items-start pb-20 gap-5'>
         <div className='lg:w-[38%] w-fit h-fit relative flex items-center'>
           <div className="h-[80%] absolute w-5 bg-[#DEC68B] rounded-2xl -left-2"></div>
-          <Image priority src={cats[0].url} height={370} width={370} alt='cat image' className='z-10 rounded-3xl w-[370px] object-cover bg-gray-100 h-[370px] drop-shadow-lg'/>
+          <Image priority src={cats[0]?.url} height={370} width={370} alt='cat image' className='z-10 rounded-3xl w-[370px] object-cover bg-gray-100 h-[370px] drop-shadow-lg'/>
         </div>
         <div className='flex flex-col items-center text-xs sm:text-base font-medium gap-6 lg:w-[62%] w-full'>
-          <h1 className='text-3xl sm:text-4xl text-[#291507] font-semibold'>{breed.name}</h1>
-          <p className='text-sm sm:text-lg text-balance text-center'>{breed.description}</p>
+          <h1 className='text-3xl sm:text-4xl text-[#291507] font-semibold'>{breed?.name}</h1>
+          <p className='text-sm sm:text-lg text-balance text-center'>{breed?.description}</p>
           <div className='overflow-x-scroll sm:overflow-auto w-full sm:w-fit flex flex-col gap-6'>
-            <p><b>Temperament: </b>{breed.temperament}</p>
-            <p><b>Origin: </b>{breed.origin}</p>
-            {properties.map(property => {
+            <p><b>Temperament: </b>{breed?.temperament}</p>
+            <p><b>Origin: </b>{breed?.origin}</p>
+            {breed && properties.map(property => {
               let count =  breed[property]
               let rest = 5 - count
               return (
